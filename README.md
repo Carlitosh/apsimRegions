@@ -1,9 +1,11 @@
 apsimRegions
 ============
 
-The apsimRegions is a suite of software tools designed to extend the point-specific Agricultural Production Systems sIMulator (APSIM) crop model to regional spatial scales. It is written in the  Python programming language and is currently verified compatible with the Windows version of APSIM 7.4. ApsimRegions is essentially a one-way nested climate-crop modeling framework that links gridded weather data (rain, temperature, radiation, etc.) with the APSIM model. See http://www.apsim.info/Wiki for more information about APSIM. It currently has only been tested with Python 2.7.3. To get started with Python try Python(X,Y) which can be downloaded at https://python-xy.github.io. The included Spyder IDE is very similar to Matlab.
+apsimRegions es una suite de herramientas de software diseñandas para entender el modelo de simulacion de cultivos Agricultural Production Systems sIMulator (APSIM) desde un punto a una escala espacial regional. Esta escrito en el lenguaje de programacion python y esta actualmente su compatibilidad en la version APSIM 7.4. ApsimRegions es esenc
 
-It is used to create and run .apsim files with many thousands of simulations. Each simulation can represent a unique location or management scenario. The simplest way to use each simulation for different locations would be to create a lookup table with a grid point number and the associated lat and lon. Each simulation would be named from the grid point.  Additionally, create a unique .met file for each grid point and reference these in each simulation. It is then possible to loop through all the grid points and create unique simulations (.met file, management rules, soil type, etc.) for each grid point.
+ApsimRegions es esencialmente un framweor  ado de cultivos climáticos anidado unidireccional que vincula datos meteorológicos en cuadrícula (lluvia, temperatura, radiación, etc.) con el modelo APSIM. Consulte http://www.apsim.info/Wiki para obtener más información sobre APSIM. Actualmente solo se ha probado con Python 2.7.3. Para comenzar con Python, pruebe Python (X, Y) que se puede descargar en https://python-xy.github.io. El IDE de Spyder incluido es muy similar a Matlab.
+
+Se utiliza para crear y ejecutar archivos .apsim con muchos miles de simulaciones. Cada simulación puede representar una ubicación única o un escenario de gestión. La forma más sencilla de utilizar cada simulación para diferentes ubicaciones sería crear una tabla de búsqueda con un número de punto de cuadrícula y la latitud y la longitud asociadas. Cada simulación se nombraría desde el punto de la cuadrícula. Además, cree un archivo .met único para cada punto de la cuadrícula y haga referencia a ellos en cada simulación. Entonces es posible recorrer todos los puntos de la cuadrícula y crear simulaciones únicas (archivo .met, reglas de gestión, tipo de suelo, etc.) para cada punto de la cuadrícula.
 
 - The apsimRegions directory contains code for creating the APSIM files (preprocess). Just move the package to your Python site-packages folder (ie C:\Python27\Lib\site-packages) and import the apsimRegions package by using in Python:
 
@@ -16,3 +18,6 @@ It is used to create and run .apsim files with many thousands of simulations. Ea
   C:\{data_directory}> "C:/Program Files (x86)/Apsim74-r2286/Model/ApsimRun.py"
   
   from the directory containing .apsim file(s) you wish to run. The associated .out and .sum files will be generated as the script runs, but will be removed after it is completed and the files are archived (*.tar.gz) and saved to a SQLite database. See the run.bat example in the examples folder.
+  
+  
+  
